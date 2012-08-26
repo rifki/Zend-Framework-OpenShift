@@ -1,0 +1,24 @@
+<?php
+$this->title = "Posting List";
+echo $this->headTitle($this->title);
+?>
+<h1><?php echo $this->title; ?></h1>
+<h4><a href="<?php echo $this->url(array('controller'=>'posting', 'action'=>'add')) ?>">Add New Posting</a></h4>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>Action</th>
+    </tr>
+    <?php foreach ($this->posting as $posting) : ?>
+    <tr>
+        <td><?php echo $posting->id; ?></td>
+        <td><?php echo $posting->title; ?></td>
+        <td>
+            <a href="<?php echo $this->url(array('controller'=>'posting', 'action'=>'modify', 'id'=>$posting->id)) ?>">Edit</a> | 
+            <a href="<?php echo $this->url(array('controller'=>'posting', 'action'=>'delete', 'id'=>$posting->id)) ?>">Delete</a> | 
+            <a href="<?php echo $this->url(array('controller'=>'posting', 'action'=>'view', 'id'=>$posting->id)) ?>">View</a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>

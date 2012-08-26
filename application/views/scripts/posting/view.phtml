@@ -1,0 +1,30 @@
+<?php 
+/**
+ * title posting. diambil dari DB dan tampilkan di title
+ */
+    $this->title = $this->posting['title'];
+    echo $this->headTitle($this->title);
+?>
+
+<!-- title & posting modified -->
+<div style="background-color: silver;  font-size: 14px;">
+    <h1><?php echo $this->title; ?></h1>
+    <p>Post Update: <?php echo $this->posting['modified']; ?></p>
+</div>
+
+<!-- body posting -->
+<div style="background-color: #91BE3F; font-size: 14px;">
+    <p>
+        <?php
+        /**
+         * nl2br: Inserts HTML line breaks before all newlines in a string
+         */
+            echo nl2br($this->posting['body']); 
+        ?>
+    </p>
+</div>
+
+<!-- footer  -->
+<div style="background-color: silver; font-size: 14px;">
+    <p align="center">&copy; 2012 Muhamad Rifki</p>
+</div>
