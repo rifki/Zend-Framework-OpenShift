@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.php.project</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/php-project/1">
-            <name>zf-bahmed.rhcloud.com</name>
+            <name>zf-openshift</name>
         </data>
     </configuration>
 </project>
